@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg:     #f8fbf6;
+  --bg2:    #eef8ea;
+  --bg3:    #e4f2e0;
+  --card:   #ffffff;
+  --border: rgba(0,0,0,0.08);
+  --text:   #253225;
+  --muted:  #5e7560;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Blob pulse animation */
+@keyframes blobPulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.35; }
+}
+
+/* Availability dot pulse */
+@keyframes dotPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.dot-pulse {
+  animation: dotPulse 2s infinite;
+}
+
+/* Timeline line gradient */
+.timeline-line {
+  background: linear-gradient(to bottom, #baf2bb, #bad7f2, #f2bac9);
+}
+
+/* Color band */
+.color-band {
+  height: 5px;
+  background: linear-gradient(90deg, #baf2bb, #baf2d8, #bad7f2, #f2bac9, #f2e2ba);
+}
