@@ -13,7 +13,15 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body>
+        {children}
+        <script
+          src="https://platform.linkedin.com/badges/js/profile.js"
+          async
+          defer
+          type="text/javascript"
+        />
+      </body>
     </html>
   );
 }

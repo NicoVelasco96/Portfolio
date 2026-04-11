@@ -1,21 +1,9 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import { techPills } from "@/data/portfolio";
 import type { TechPill } from "@/types";
 
 export default function HeroSection() {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://platform.linkedin.com/badges/js/profile.js";
-    script.async = true;
-    script.defer = true;
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
   return (
     <section
       id="hero"
