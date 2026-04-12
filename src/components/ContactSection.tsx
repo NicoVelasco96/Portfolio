@@ -1,3 +1,8 @@
+// src/components/ContactSection.tsx
+import React from "react";
+import { contactLinks } from "@/data/portfolio";
+import type { ContactLink } from "@/types";
+
 export default function ContactSection() {
   return (
     <section id="contacto" className="py-24 px-16 bg-bg relative">
@@ -17,34 +22,23 @@ export default function ContactSection() {
         </p>
 
         <div className="flex gap-4 justify-center flex-wrap reveal">
-          <a
-            href="mailto:velasconico001@gmail.com"
-            className="flex items-center gap-2 px-6 py-3 rounded-xl font-medium text-[0.9rem]
-              no-underline transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90
-              bg-gradient-to-br from-brand-pink to-brand-pink-dark text-white"
-          >
-            ✉️ Enviar email
-          </a>
-          <a
-            href="https://github.com/NicoVelasco96"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-6 py-3 rounded-xl font-medium text-[0.9rem]
-              no-underline transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90
-              bg-accent-cream text-[#7a5010] border border-[rgba(200,160,80,0.3)]"
-          >
-            ⚙️ GitHub
-          </a>
-          <a
-            href="https://www.linkedin.com/in/nicolasvelasco1996/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-6 py-3 rounded-xl font-medium text-[0.9rem]
-              no-underline transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90
-              bg-accent-blue text-[#2a5078] border border-[rgba(90,136,184,0.35)]"
-          >
-            💼 LinkedIn
-          </a>
+          {contactLinks.map((link: ContactLink) => (
+            <a
+              key={link.label}
+              href={link.href}
+              target={link.isExternal ? "_blank" : undefined}
+              rel={link.isExternal ? "noopener noreferrer" : undefined}
+              className="flex items-center gap-2.5 px-6 py-3 rounded-xl font-medium text-[0.9rem]
+                no-underline transition-all duration-300 hover:-translate-y-1
+                bg-white border border-[rgba(0,0,0,0.08)] text-text shadow-sm hover:shadow-md"
+            >
+              <link.icon 
+                size={20} 
+                style={{ color: link.color }} 
+              />
+              {link.label}
+            </a>
+          ))}
         </div>
       </div>
     </section>

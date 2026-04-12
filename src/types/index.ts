@@ -47,3 +47,11 @@ export interface NavLink {
   href: string;
   label: string;
 }
+
+export interface ContactLink {
+  icon: React.ElementType;
+  label: string;
+  href: string;
+  color: string;
+  isExternal?: boolean;
+}

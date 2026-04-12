@@ -10,10 +10,13 @@ import {
   SiDocker,
   SiNextdotjs,
   SiTailwindcss,
-  SiAstro
+  SiAstro,
+  SiGmail,
+  SiGithub,
 } from "react-icons/si";
 import { JavaIcon, EvolutionAPIIcon } from "@/components/JavaIcon";
-import type { Project, Education, Stat, TechPill, NavLink } from "@/types";
+import type { Project, Education, Stat, TechPill, NavLink, ContactLink } from "@/types";
+import { LiaLinkedin } from "react-icons/lia";
 
 export const navLinks: NavLink[] = [
   { href: "#proyectos", label: "Proyectos" },
@@ -220,7 +223,30 @@ export const education: Education[] = [
 ];
 
 export const stats: Stat[] = [
-  { value: "3+", label: "Proyectos completados", bg: "bg-accent-green2" },
+  { value: "5+", label: "Proyectos completados", bg: "bg-accent-green2" },
   { value: "3+", label: "Años de experiencia", bg: "bg-accent-blue" },
   { value: "10+", label: "Tecnologías", bg: "bg-accent-pink" },
+];
+
+export const contactLinks: ContactLink[] = [
+  {
+    icon: SiGmail,
+    label: "Enviar email",
+    href: "mailto:velasconico001@gmail.com",
+    color: "#E0234E" // Usando el rosa de tu marca
+  },
+  {
+    icon: SiGithub,
+    label: "GitHub",
+    href: "https://github.com/NicoVelasco96",
+    color: "#333",
+    isExternal: true
+  },
+  {
+    icon: LiaLinkedin,
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/nicolasvelasco1996/",
+    color: "#0077b5",
+    isExternal: true
+  },
 ];
