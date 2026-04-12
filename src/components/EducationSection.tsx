@@ -1,4 +1,3 @@
-// src/components/EducationSection.tsx
 import React from "react";
 import { education } from "@/data/portfolio";
 import type { Education } from "@/types";
@@ -28,7 +27,7 @@ export default function EducationSection() {
           <div
             key={item.id}
             className="relative mb-10 p-6 bg-white border-[1.5px] border-[rgba(0,0,0,0.08)]
-              rounded-2xl reveal"
+              rounded-2xl reveal group"
           >
             {/* Timeline dot */}
             <span
@@ -36,15 +35,40 @@ export default function EducationSection() {
                 border-[2.5px] border-white ${item.dotColor} ${item.dotShadow}`}
             />
 
-            <div className="text-[0.78rem] text-brand-pink mb-1 font-semibold tracking-wide">
-              {item.period}
+            {/* Header section: Cambiamos a items-end para que el botón baje */}
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 mb-4">
+              <div className="flex-1">
+                <div className="text-[0.78rem] text-brand-pink font-semibold tracking-wide mb-1">
+                  {item.period}
+                </div>
+                <div className="font-syne font-bold text-[1.15rem] leading-tight mb-1">
+                  {item.title}
+                </div>
+                <div className="text-muted text-[0.88rem]">
+                  {item.institution}
+                </div>
+              </div>
+              
+              {/* Botón de Certificado - Ahora alineado al fondo del bloque de texto */}
+              {item.certificateUrl && (
+                <a
+                  href={item.certificateUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-shrink-0 text-[0.85rem] flex items-center gap-2 px-5 py-2.5 
+                             bg-white border-[1.5px] border-brand-pink/20 rounded-xl 
+                             text-text font-medium shadow-sm hover:shadow-md
+                             hover:bg-brand-pink hover:text-white hover:border-brand-pink
+                             transition-all duration-300 ease-in-out sm:mb-1"
+                >
+                  Ver Certificado
+                  <span className="text-[1rem]">↗</span>
+                </a>
+              )}
             </div>
-            <div className="font-syne font-bold text-[1.05rem] mb-1">
-              {item.title}
-            </div>
-            <div className="text-muted text-[0.88rem] mb-4">{item.institution}</div>
 
-            <div className="flex gap-2 flex-wrap">
+            {/* Materias / Tags */}
+            <div className="flex gap-2 flex-wrap mt-5 border-t border-[rgba(0,0,0,0.03)] pt-4">
               {item.subjects.map((subject) => (
                 <span
                   key={subject}

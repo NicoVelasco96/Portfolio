@@ -28,6 +28,7 @@ export interface Education {
   subjects: string[];
   dotColor: string;
   dotShadow: string;
+  certificateUrl?: string;
 }
 
 export interface Stat {

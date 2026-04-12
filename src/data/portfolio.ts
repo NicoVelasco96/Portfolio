@@ -1,5 +1,5 @@
 import {
-   SiNodedotjs, SiTypescript, SiSpringboot,
+  SiNodedotjs, SiTypescript, SiSpringboot,
   SiNestjs, SiVercel,
   SiPostgresql,
   SiPrisma,
@@ -10,8 +10,9 @@ import {
   SiDocker,
   SiNextdotjs,
   SiTailwindcss,
-  SiAstro} from "react-icons/si";
-import { JavaIcon, EvolutionAPIIcon} from "@/components/JavaIcon";
+  SiAstro
+} from "react-icons/si";
+import { JavaIcon, EvolutionAPIIcon } from "@/components/JavaIcon";
 import type { Project, Education, Stat, TechPill, NavLink } from "@/types";
 
 export const navLinks: NavLink[] = [
@@ -39,7 +40,7 @@ export const projects: Project[] = [
     iconBg: "bg-accent-green2/50",
     image: "/full-shop.jpg",
     tags: [
-      { icon: SiNestjs,label: "NestJS", color: "blue" },
+      { icon: SiNestjs, label: "NestJS", color: "blue" },
       { icon: SiTypescript, label: "TypeScript", color: "blue" },
       { icon: SiVercel, label: "Vercel", color: "green" },
       { icon: SiPrisma, label: "Prisma", color: "teal" },
@@ -120,6 +121,91 @@ export const education: Education[] = [
     period: "2022 – 2024",
     title: "Técnico Superior en Programación",
     institution: "Universidad Tecnológica Nacional (UTN)",
+    subjects: [
+      "Diseño de Sistemas",
+      "Estructuras de Datos",
+      "POO",
+      "Bases de Datos",
+      "Metodologías Ágiles",
+      "JAVA",
+    ],
+    dotColor: "bg-accent-pink",
+    dotShadow: "shadow-[0_0_0_3px_rgba(242,186,201,0.45)]",
+  },
+  {
+    id: "TodoCode",
+    period: "27-02-2023",
+    title: "Introducción a Git y GitHub",
+    institution: "TodoCode Academy",
+    certificateUrl: "https://todocodeacademy.com/certificate/2eb/",
+    subjects: [
+      "Diseño de Sistemas",
+      "Estructuras de Datos",
+      "POO",
+      "Bases de Datos",
+      "Metodologías Ágiles",
+      "JAVA",
+    ],
+    dotColor: "bg-accent-pink",
+    dotShadow: "shadow-[0_0_0_3px_rgba(242,186,201,0.45)]",
+  },
+  {
+    id: "TodoCode1",
+    period: "27-02-2023",
+    title: "Introducción a las Bases de Datos Relacionales (Con MySQL)",
+    institution: "TodoCode Academy",
+    certificateUrl: "https://todocodeacademy.com/certificate/rw3/",
+    subjects: [
+      "Diseño de Sistemas",
+      "Estructuras de Datos",
+      "POO",
+      "Bases de Datos",
+      "Metodologías Ágiles",
+      "JAVA",
+    ],
+    dotColor: "bg-accent-pink",
+    dotShadow: "shadow-[0_0_0_3px_rgba(242,186,201,0.45)]",
+  },
+  {
+    id: "TodoCode2",
+    period: "01-07-2024",
+    title: "Introducción a los Algoritmos y la Programación",
+    institution: "TodoCode Academy",
+    certificateUrl: "https://todocodeacademy.com/certificate/introduccion-a-los-algoritmos-y-la-programacion-398/",
+    subjects: [
+      "Diseño de Sistemas",
+      "Estructuras de Datos",
+      "POO",
+      "Bases de Datos",
+      "Metodologías Ágiles",
+      "JAVA",
+    ],
+    dotColor: "bg-accent-pink",
+    dotShadow: "shadow-[0_0_0_3px_rgba(242,186,201,0.45)]",
+  },
+  {
+    id: "TodoCode4",
+    period: "06-08-2024",
+    title: "Programación Orientada a Objetos con Java",
+    institution: "TodoCode Academy",
+    certificateUrl: "https://todocodeacademy.com/certificate/certificado-curso-poo-con-java-7vt/",
+    subjects: [
+      "Diseño de Sistemas",
+      "Estructuras de Datos",
+      "POO",
+      "Bases de Datos",
+      "Metodologías Ágiles",
+      "JAVA",
+    ],
+    dotColor: "bg-accent-pink",
+    dotShadow: "shadow-[0_0_0_3px_rgba(242,186,201,0.45)]",
+  },
+  {
+    id: "TodoCode3",
+    period: "04-11-2023",
+    title: "Desarrollo de APIs en Java con Spring Boot",
+    institution: "TodoCode Academy",
+    certificateUrl: "https://todocodeacademy.com/certificate/vei/",
     subjects: [
       "Diseño de Sistemas",
       "Estructuras de Datos",
