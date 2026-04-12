@@ -1,9 +1,13 @@
 "use client";
+
 import React from "react";
 import { techPills } from "@/data/portfolio";
 import type { TechPill } from "@/types";
+import { useApp } from "@/context/AppContext";
 
 export default function HeroSection() {
+  const { t } = useApp();
+
   return (
     <section
       id="hero"
@@ -23,14 +27,14 @@ export default function HeroSection() {
         <div className="flex flex-col flex-1">
           <div className="inline-flex items-center gap-2 bg-accent-green2 border border-[rgba(100,180,130,0.3)] px-4 py-[0.35rem] rounded-full text-[0.82rem] text-[#1a5a30] mb-6 w-fit relative reveal">
             <span className="w-[7px] h-[7px] rounded-full bg-[#38a860] dot-pulse block" />
-            Disponible para proyectos
+            {t.hero.available}
           </div>
 
           <h1
             className="font-syne font-extrabold leading-[1.05] tracking-[-0.04em] mb-5 relative reveal"
             style={{ fontSize: "clamp(2.8rem, 6.5vw, 5.4rem)" }}
           >
-            Hola, soy
+            {t.hero.greeting}
             <br />
             <span className="bg-gradient-to-br from-brand-pink to-[#5a88b8] bg-clip-text text-transparent">
               Nicolas Velasco
@@ -38,8 +42,7 @@ export default function HeroSection() {
           </h1>
 
           <p className="text-muted max-w-[520px] mb-10 font-light text-[1.1rem] relative reveal">
-            Desarrollador Back-End apasionado por construir productos web modernos,
-            escalables y con buena experiencia de usuario.
+            {t.hero.description}
           </p>
 
           <div className="flex gap-4 flex-wrap relative reveal">
@@ -47,13 +50,13 @@ export default function HeroSection() {
               href="#proyectos"
               className="bg-gradient-to-br from-brand-pink to-brand-pink-dark text-white px-8 py-3 rounded-xl font-medium no-underline hover:-translate-y-0.5 hover:opacity-90 transition-all duration-200"
             >
-              Ver proyectos
+              {t.hero.cta_projects}
             </a>
             <a
               href="#contacto"
               className="border border-[rgba(0,0,0,0.08)] text-text bg-white px-8 py-3 rounded-xl font-medium no-underline hover:bg-bg-3 transition-colors duration-200"
             >
-              Contactame
+              {t.hero.cta_contact}
             </a>
           </div>
         </div>

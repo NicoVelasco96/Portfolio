@@ -27,3 +27,37 @@ export const EvolutionAPIIcon = ({ className }: { className?: string }) => (
     />
   </svg>
 );
+
+export const PortfolioFavicon = ({ className }: { className?: string }) => (
+  <svg
+    viewBox="0 0 24 24"
+    className={className}
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <defs>
+      <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#00D2FF" />
+        <stop offset="100%" stopColor="#928DFF" />
+      </linearGradient>
+    </defs>
+
+    {/* La "N" rotada (estilo corchete) */}
+    <path
+      d="M8 6L4 12L8 18M8 6L12 12L8 18"
+      stroke="url(#brandGradient)"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+
+    {/* La "V" minimalista */}
+    <path
+      d="M14 6L18 18L22 6"
+      stroke="url(#brandGradient)"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);

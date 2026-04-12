@@ -1,6 +1,8 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  // 1. IMPORTANTE: Agregamos esta línea para habilitar el modo oscuro por clase
+  darkMode: "class",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -13,20 +15,24 @@ const config: Config = {
         dm: ["DM Sans", "sans-serif"],
       },
       colors: {
+        // 2. CONEXIÓN: Ahora 'bg-2' no es un color fijo, es la variable de tu CSS
         bg: {
-          DEFAULT: "#f8fbf6",
-          2: "#eef8ea",
-          3: "#e4f2e0",
+          DEFAULT: "var(--bg)",
+          2: "var(--bg2)",
+          3: "var(--bg3)",
         },
-        card: "#ffffff",
-        text: "#253225",
-        muted: "#5e7560",
+        card: "var(--card)",
+        text: "var(--text)",
+        muted: "var(--muted)",
         accent: {
           green1: "#baf2bb",
           green2: "#baf2d8",
           blue: "#bad7f2",
           pink: "#f2bac9",
           cream: "#f2e2ba",
+          pacificblue: '#58A4B0',
+          mutedteal: '#92B6B1',
+          aquamarine: '#ACFCD9'
         },
         brand: {
           pink: "#bf6a7a",
@@ -35,7 +41,7 @@ const config: Config = {
         },
       },
       borderColor: {
-        DEFAULT: "rgba(0,0,0,0.08)",
+        DEFAULT: "var(--border)", // Usamos la variable de borde también
       },
       animation: {
         pulse: "pulse 2s infinite",

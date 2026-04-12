@@ -223,8 +223,8 @@ export const education: Education[] = [
 ];
 
 export const stats: Stat[] = [
-  { value: "5+", label: "Proyectos completados", bg: "bg-accent-green2" },
-  { value: "3+", label: "Años de experiencia", bg: "bg-accent-blue" },
+  { value: "5+", label: "Proyectos completados", bg: "bg-accent-cream" },
+  { value: "3+", label: "Años de experiencia", bg: "bg-accent-aquamarine" },
   { value: "10+", label: "Tecnologías", bg: "bg-accent-pink" },
 ];
 

@@ -8,10 +8,20 @@
   --bg:     #f8fbf6;
   --bg2:    #eef8ea;
   --bg3:    #e4f2e0;
-  --card:   #ffffff;
+  --card:   #ffffff; /* Este es el color para modo claro */
   --border: rgba(0,0,0,0.08);
   --text:   #253225;
   --muted:  #5e7560;
+}
+
+.dark {
+  --bg:     #111a11;
+  --bg2:    #162016;
+  --bg3:    #1c2a1c;
+  --card:   #000000; /* ESTA ES LA LÍNEA QUE FALTABA: Fondo negro para los cuadrados */
+  --border: rgba(255,255,255,0.12);
+  --text:   #e8f0e8;
+  --muted:  #8aaa8a;
 }
 
 * {
@@ -29,6 +39,7 @@ body {
   color: var(--text);
   font-family: 'DM Sans', sans-serif;
   overflow-x: hidden;
+  transition: background 0.3s, color 0.3s;
 }
 
 /* Reveal animation */
