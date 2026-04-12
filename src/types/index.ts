@@ -1,7 +1,5 @@
 import type { IconType } from "react-icons";
 
-// src/types/index.ts
-
 export interface Project {
   id: string;
   title: string;
@@ -24,6 +22,7 @@ export interface Education {
   id: string;
   period: string;
   title: string;
+  institutionLogo: string;
   institution: string;
   subjects: string[];
   dotColor: string;
@@ -53,5 +52,6 @@ export interface ContactLink {
   label: string;
   href: string;
   color: string;
+  hoverColor: string;
   isExternal?: boolean;
 }

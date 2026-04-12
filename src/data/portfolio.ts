@@ -14,7 +14,7 @@ import {
   SiGmail,
   SiGithub,
 } from "react-icons/si";
-import { JavaIcon, EvolutionAPIIcon } from "@/components/JavaIcon";
+import { JavaIcon, EvolutionAPIIcon } from "@/components/Icons";
 import type { Project, Education, Stat, TechPill, NavLink, ContactLink } from "@/types";
 import { LiaLinkedin } from "react-icons/lia";
 
@@ -122,6 +122,7 @@ export const education: Education[] = [
   {
     id: "utn",
     period: "2022 – 2024",
+    institutionLogo: "/logos/utn.png",
     title: "Técnico Superior en Programación",
     institution: "Universidad Tecnológica Nacional (UTN)",
     subjects: [
@@ -139,6 +140,7 @@ export const education: Education[] = [
     id: "TodoCode",
     period: "27-02-2023",
     title: "Introducción a Git y GitHub",
+    institutionLogo: "/logos/todo-code.png",
     institution: "TodoCode Academy",
     certificateUrl: "https://todocodeacademy.com/certificate/2eb/",
     subjects: [
@@ -154,6 +156,7 @@ export const education: Education[] = [
     id: "TodoCode1",
     period: "27-02-2023",
     title: "Introducción a las Bases de Datos Relacionales (Con MySQL)",
+    institutionLogo: "/logos/todo-code.png",
     institution: "TodoCode Academy",
     certificateUrl: "https://todocodeacademy.com/certificate/rw3/",
     subjects: [
@@ -170,6 +173,7 @@ export const education: Education[] = [
     id: "TodoCode2",
     period: "01-07-2024",
     title: "Introducción a los Algoritmos y la Programación",
+    institutionLogo: "/logos/todo-code.png",
     institution: "TodoCode Academy",
     certificateUrl: "https://todocodeacademy.com/certificate/introduccion-a-los-algoritmos-y-la-programacion-398/",
     subjects: [
@@ -186,6 +190,7 @@ export const education: Education[] = [
     id: "TodoCode4",
     period: "06-08-2024",
     title: "Programación Orientada a Objetos con Java",
+    institutionLogo: "/logos/todo-code.png",
     institution: "TodoCode Academy",
     certificateUrl: "https://todocodeacademy.com/certificate/certificado-curso-poo-con-java-7vt/",
     subjects: [
@@ -201,6 +206,7 @@ export const education: Education[] = [
     id: "TodoCode3",
     period: "04-11-2023",
     title: "Desarrollo de APIs en Java con Spring Boot",
+    institutionLogo: "/logos/todo-code.png",
     institution: "TodoCode Academy",
     certificateUrl: "https://todocodeacademy.com/certificate/vei/",
     subjects: [
@@ -227,20 +233,23 @@ export const contactLinks: ContactLink[] = [
     icon: SiGmail,
     label: "Enviar email",
     href: "mailto:velasconico001@gmail.com",
-    color: "#E0234E" // Usando el rosa de tu marca
+    color: "#E0234E",
+    hoverColor: "#EA4335",
   },
   {
     icon: SiGithub,
     label: "GitHub",
     href: "https://github.com/NicoVelasco96",
     color: "#333",
-    isExternal: true
+    hoverColor: "#9E9E9E",
+    isExternal: true,
   },
   {
     icon: LiaLinkedin,
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/nicolasvelasco1996/",
     color: "#0077b5",
-    isExternal: true
+    hoverColor: "#42A5F5",
+    isExternal: true,
   },
 ];

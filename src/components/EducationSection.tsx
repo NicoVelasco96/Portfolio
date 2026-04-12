@@ -1,6 +1,8 @@
 import React from "react";
 import { education } from "@/data/portfolio";
 import type { Education } from "@/types";
+import { SiGithub } from "react-icons/si";
+import { HiAcademicCap } from "react-icons/hi";
 
 export default function EducationSection() {
   return (
@@ -44,11 +46,18 @@ export default function EducationSection() {
                 <div className="font-syne font-bold text-[1.15rem] leading-tight mb-1">
                   {item.title}
                 </div>
-                <div className="text-muted text-[0.88rem]">
+                <div className="text-muted text-[0.88rem] flex items-center gap-1.5">
+                  {item.institutionLogo && (
+                    <img
+                      src={item.institutionLogo}
+                      alt={item.institution}
+                      className="w-12 h-12 object-contain rounded-sm"
+                    />
+                  )}
                   {item.institution}
                 </div>
               </div>
-              
+
               {/* Botón de Certificado - Ahora alineado al fondo del bloque de texto */}
               {item.certificateUrl && (
                 <a

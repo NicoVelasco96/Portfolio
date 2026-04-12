@@ -1,7 +1,34 @@
-// src/components/ContactSection.tsx
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { contactLinks } from "@/data/portfolio";
 import type { ContactLink } from "@/types";
+
+function ContactButton({ link }: { link: ContactLink }) {
+  const [hovered, setHovered] = useState(false);
+
+  return (
+    <a
+      href={link.href}
+      target={link.isExternal ? "_blank" : undefined}
+      rel={link.isExternal ? "noopener noreferrer" : undefined}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      className="flex items-center gap-2.5 px-6 py-3 rounded-xl font-medium text-[0.9rem] no-underline transition-all duration-300 hover:-translate-y-1 border border-[rgba(0,0,0,0.08)] shadow-sm hover:shadow-md"
+      style={{
+        backgroundColor: hovered ? link.hoverColor : "white",
+        color: hovered ? "white" : "inherit",
+        transition: "background-color 0.3s, color 0.3s",
+      }}
+    >
+      <link.icon
+        size={20}
+        style={{ color: hovered ? "white" : link.color }}
+      />
+      {link.label}
+    </a>
+  );
+}
 
 export default function ContactSection() {
   return (
@@ -20,24 +47,9 @@ export default function ContactSection() {
           Estoy disponible para proyectos freelance, colaboraciones y
           oportunidades laborales. ¡Hablemos!
         </p>
-
         <div className="flex gap-4 justify-center flex-wrap reveal">
           {contactLinks.map((link: ContactLink) => (
-            <a
-              key={link.label}
-              href={link.href}
-              target={link.isExternal ? "_blank" : undefined}
-              rel={link.isExternal ? "noopener noreferrer" : undefined}
-              className="flex items-center gap-2.5 px-6 py-3 rounded-xl font-medium text-[0.9rem]
-                no-underline transition-all duration-300 hover:-translate-y-1
-                bg-white border border-[rgba(0,0,0,0.08)] text-text shadow-sm hover:shadow-md"
-            >
-              <link.icon 
-                size={20} 
-                style={{ color: link.color }} 
-              />
-              {link.label}
-            </a>
+            <ContactButton key={link.label} link={link} />
           ))}
         </div>
       </div>
