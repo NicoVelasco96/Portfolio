@@ -46,7 +46,7 @@ export const projects: Project[] = [
       { icon: SiMercadopago, label: "Mercado Pago", color: "cream" },
       { icon: SiPostgresql, label: "PostgreSQL", color: "green" },
     ],
-    href: "#",
+    href: "https://full-shop-frontend.vercel.app/",
   },
   {
     id: "turnos",
@@ -62,7 +62,7 @@ export const projects: Project[] = [
       { icon: SiTypeorm, label: "TypeORM", color: "cream" },
       { icon: SiPrisma, label: "Prisma", color: "teal" },
     ],
-    href: "#",
+    href: "https://hospital-militar.fullsalud.com.ar/",
   },
   {
     id: "juridico",
@@ -77,7 +77,7 @@ export const projects: Project[] = [
       { icon: SiPostgresql, label: "PostgreSQL", color: "teal" },
       { icon: SiPrisma, label: "Prisma", color: "cream" },
     ],
-    href: "#",
+    href: "https://rsl-legales.vercel.app/",
   },
   {
     id: "cobranzas",
@@ -94,7 +94,7 @@ export const projects: Project[] = [
       { icon: SiWhatsapp, label: "WhatsApp", color: "green" },
       { icon: SiDocker, label: "Docker", color: "default" },
     ],
-    href: "#",
+    href: "https://front-end-buffet.vercel.app/",
   },
   {
     id: "portfolio",
@@ -110,7 +110,7 @@ export const projects: Project[] = [
       { icon: SiAstro, label: "Astro", color: "blue" },
       { icon: SiVercel, label: "Vercel", color: "green" },
     ],
-    href: "#",
+    href: "https://portfolio-nicolas-velasco.vercel.app/",
   },
 ];
 
