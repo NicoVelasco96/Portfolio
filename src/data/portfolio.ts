@@ -36,8 +36,8 @@ export const projects: Project[] = [
     title: "E-Commerce Platform",
     description:
       "Tienda online con catálogo, carrito, checkout y panel de administración. Integración con pasarela de pagos y gestión de inventario en tiempo real.",
-    icon: "🛒",
     iconBg: "bg-accent-green2/50",
+    image: "/full-shop.jpg",
     tags: [
       { icon: SiNestjs,label: "NestJS", color: "blue" },
       { icon: SiTypescript, label: "TypeScript", color: "blue" },
@@ -53,7 +53,7 @@ export const projects: Project[] = [
     title: "Sistema de Turnos Online",
     description:
       "Gestión de turnos con calendario interactivo, reserva en tiempo real y notificaciones automáticas por email/WhatsApp.",
-    icon: "📅",
+    image: "/turnero.jpg",
     iconBg: "bg-accent-blue/50",
     tags: [
       { icon: SiNestjs, label: "NestJS", color: "blue" },
@@ -69,7 +69,7 @@ export const projects: Project[] = [
     title: "Estudio Jurídico – Asesoramiento Legal",
     description:
       "Página para estudio legal con áreas de práctica, blog jurídico, reserva de entrevistas y contratación de servicios online.",
-    icon: "⚖️",
+    image: "/legales.jpg",
     iconBg: "bg-accent-cream/50",
     tags: [
       { icon: SiNestjs, label: "NestJS", color: "blue" },
@@ -84,7 +84,7 @@ export const projects: Project[] = [
     title: "Mensajes Automáticos a Deudores",
     description:
       "Sistema de cobranza automatizada con microservicios Java, orquestación de flujos via N8N y envío masivo de mensajes WhatsApp a través de EvolutionAPI. Dashboard de métricas en tiempo real.",
-    icon: "🤖",
+    image: "/buffet.jpg",
     iconBg: "bg-accent-pink/50",
     tags: [
       { icon: JavaIcon, label: "Java", color: "pink" },
@@ -101,7 +101,7 @@ export const projects: Project[] = [
     title: "Portfolio Personal",
     description:
       "Este mismo portfolio, construido con Next.js, TypeScript, Tailwind y Astro. Animaciones CSS, i18n y despliegue en Vercel.",
-    icon: "💼",
+    image: "/portfolio.jpg",
     iconBg: "bg-accent-green1/50",
     tags: [
       { icon: SiNextdotjs, label: "Next.js", color: "blue" },

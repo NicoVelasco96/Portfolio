@@ -6,10 +6,10 @@ export interface Project {
   id: string;
   title: string;
   description: string;
-  icon: string;
   iconBg: string;
   tags: Tag[];
   href: string;
+  image: string;
 }
 
 export interface Tag {

@@ -9,44 +9,48 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div
-      className="bg-white border-[1.5px] border-[rgba(0,0,0,0.08)] rounded-[18px]
-        flex flex-col transition-all duration-300 overflow-hidden
-        hover:-translate-y-1 hover:border-[rgba(186,215,242,0.8)]
-        hover:shadow-[0_12px_28px_rgba(0,0,0,0.07)] reveal"
-    >
-      {/* Card header */}
-      <div className="p-[1.4rem] pb-[0.4rem] flex items-start justify-between">
-        <div
-          className={`w-[46px] h-[46px] rounded-xl flex items-center justify-center text-[1.35rem] ${project.iconBg}`}
-        >
-          {project.icon}
-        </div>
+    <div className="bg-white border-[1.5px] border-[rgba(0,0,0,0.08)] rounded-[20px] 
+                    flex flex-col transition-all duration-300 overflow-hidden 
+                    hover:-translate-y-1 hover:border-[rgba(186,215,242,0.8)] 
+                    hover:shadow-[0_12px_28px_rgba(0,0,0,0.07)] reveal h-full relative group">
+
+      {/* Contenedor de Imagen */}
+      <div className="relative w-full aspect-video bg-gray-50 flex-shrink-0 overflow-hidden border-b border-[rgba(0,0,0,0.05)]">
+        <img
+          src={project.image}
+          alt={project.title}
+          className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" 
+        />
+
+        {/* Botón Flotante */}
         <a
           href={project.href}
-          className="text-muted text-[0.74rem] no-underline flex items-center gap-1
-            px-[0.65rem] py-[0.28rem] border border-[rgba(0,0,0,0.08)] rounded-md
-            hover:text-text transition-colors duration-200"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm text-[0.72rem] 
+                     flex items-center gap-1 px-3.5 py-1.5 border border-[rgba(0,0,0,0.1)] 
+                     rounded-full hover:bg-white transition-all shadow-md font-medium"
         >
           Ver proyecto ↗
         </a>
       </div>
 
-      {/* Card body */}
-      <div className="px-[1.4rem] pb-[1.4rem] pt-[0.6rem] flex-1 flex flex-col">
-        <h3 className="font-syne font-bold text-[1.08rem] mb-[0.4rem] tracking-tight">
+      {/* Cuerpo de la Card */}
+      <div className="p-6 flex flex-col flex-grow">
+        <h3 className="font-syne font-bold text-[1.12rem] tracking-tight mb-2 pr-4 text-text">
           {project.title}
         </h3>
-        <p className="text-muted text-[0.88rem] leading-[1.65] flex-1 mb-[1.1rem]">
+
+        <p className="text-muted text-[0.9rem] leading-[1.6] mb-6 flex-grow">
           {project.description}
         </p>
 
         {/* Tags */}
-        <div className="flex gap-[0.35rem] flex-wrap">
+        <div className="flex gap-2 flex-wrap mt-auto pt-2">
           {project.tags.map((tag) => (
             <span
               key={tag.label}
-              className={`inline-flex items-center gap-1.5 px-[0.6rem] py-[0.18rem] rounded-md text-[0.73rem] border ${getTagClasses(tag.color)}`}
+              className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[0.72rem] border font-medium ${getTagClasses(tag.color)}`}
             >
               {tag.icon && <tag.icon className="w-3.5 h-3.5" />}
               {tag.label}

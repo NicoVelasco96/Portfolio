@@ -20,7 +20,10 @@ export default function ProjectsSection() {
         con microservicios.
       </p>
 
-      <div className="grid grid-cols-[repeat(auto-fill,minmax(310px,1fr))] gap-6">
+      {/* CAMBIO CLAVE: Añadimos 'items-stretch' para que todas las cards midan lo mismo 
+          y aseguramos que el grid maneje bien el espaciado.
+      */}
+      <div className="grid grid-cols-[repeat(auto-fill,minmax(310px,1fr))] gap-8 items-stretch">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
