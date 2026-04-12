@@ -1,7 +1,73 @@
+"use client";
 // src/components/AboutSection.tsx
 import React from "react";
 import { stats } from "@/data/portfolio";
 import type { Stat } from "@/types";
+
+function LinkedInBadge() {
+  return (
+    <a
+      href="https://ar.linkedin.com/in/nicolasvelasco1996"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block no-underline group"
+    >
+      <div className="bg-white border border-[rgba(0,0,0,0.1)] rounded-2xl overflow-hidden w-[420px] shadow-sm hover:shadow-md transition-shadow duration-200">
+        {/* Header gris con logo LinkedIn */}
+        <div className="bg-[#f3f2f0] px-8 py-5">
+          <div className="flex items-center gap-1">
+            <span style={{ fontFamily: "Arial, sans-serif", fontSize: "26px", fontWeight: "bold", color: "#0077B5", letterSpacing: "-0.5px" }}>Linked</span>
+            <span style={{ background: "#0077B5", color: "white", fontFamily: "Arial, sans-serif", fontSize: "26px", fontWeight: "bold", borderRadius: "4px", padding: "0 4px", lineHeight: "1.3" }}>in</span>
+          </div>
+        </div>
+
+        {/* Contenido */}
+        <div className="px-8 py-7">
+          {/* Foto */}
+          <div className="mb-5">
+            <img
+              src="/profile.jpg"
+              alt="Nicolas Velasco"
+              className="w-24 h-24 rounded-full object-cover border-2 border-white shadow-sm"
+              onError={(e) => {
+                const target = e.currentTarget;
+                target.style.display = "none";
+                const fallback = target.nextElementSibling as HTMLElement;
+                if (fallback) fallback.style.display = "flex";
+              }}
+            />
+            <div
+              className="w-24 h-24 rounded-full bg-[#e8f0f8] items-center justify-center text-[#5a88b8] font-bold text-2xl border-2 border-white shadow-sm"
+              style={{ display: "none" }}
+            >
+              NV
+            </div>
+          </div>
+
+          {/* Nombre */}
+          <p className="font-bold text-[1.2rem] text-gray-900 leading-tight mb-2">
+            Nicolas Velasco
+          </p>
+
+          {/* Descripción */}
+          <p className="text-[0.88rem] text-gray-600 leading-snug mb-4">
+            Desarrollador Back-end | Java | Spingboot | TypeScript | Docker | Vercel | NestJS
+          </p>
+
+          {/* Empresa */}
+          <p className="text-[0.85rem] text-[#0077b5] font-medium mb-6">
+            Full Salud | Universidad Tecnológica Nacional
+          </p>
+
+          {/* Botón */}
+          <span className="inline-block border border-[#0077b5] text-[#0077b5] text-[0.9rem] font-semibold px-6 py-2.5 rounded-full group-hover:bg-[#0077b5] group-hover:text-white transition-colors duration-200">
+            Ver perfil
+          </span>
+        </div>
+      </div>
+    </a>
+  );
+}
 
 export default function AboutSection() {
   return (
@@ -44,22 +110,10 @@ export default function AboutSection() {
           </div>
         </div>
 
-        {/* Visual column */}
-        <div className="hidden md:block relative">
-          <div
-            className="rounded-[22px] border-[1.5px] border-[rgba(0,0,0,0.08)] aspect-[4/5]
-              flex items-center justify-center text-[6rem] overflow-hidden"
-            style={{
-              background: "linear-gradient(135deg, #baf2d8, #bad7f2)",
-            }}
-          >
-            👨‍💻
-          </div>
-          <div
-            className="absolute bottom-[-1rem] right-[-1.5rem] bg-white border border-[rgba(0,0,0,0.08)]
-              px-5 py-4 rounded-2xl text-[0.84rem] flex items-center gap-2
-              shadow-[0_8px_24px_rgba(0,0,0,0.08)]"
-          >
+        {/* Visual column - LinkedIn badge */}
+        <div className="hidden md:flex flex-col items-center justify-center gap-6 relative">
+          <LinkedInBadge />
+          <div className="bg-white border border-[rgba(0,0,0,0.08)] px-5 py-4 rounded-2xl text-[0.84rem] flex items-center gap-2 shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
             <span className="w-2 h-2 rounded-full bg-[#38a860] block" />
             Disponible para proyectos freelance
           </div>

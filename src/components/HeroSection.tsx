@@ -58,23 +58,14 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Columna derecha - insignia LinkedIn */}
+        {/* Columna derecha - foto */}
         <div className="flex items-center justify-center lg:justify-end flex-shrink-0 reveal">
-          <div
-            className="badge-base LI-profile-badge"
-            data-locale="es_ES"
-            data-size="medium"
-            data-theme="light"
-            data-type="HORIZONTAL"
-            data-vanity="nicolasvelasco1996"
-            data-version="v1"
-          >
-            <a
-              className="badge-base__link LI-simple-link"
-              href="https://ar.linkedin.com/in/nicolasvelasco1996?trk=profile-badge"
-            >
-              Nicolas Velasco
-            </a>
+          <div className="relative">
+            <img
+              src="/foto_perfil.jpg"
+              alt="Nicolas Velasco"
+              className="w-[340px] h-[340px] object-cover object-top rounded-2xl shadow-lg"
+            />
           </div>
         </div>
 
