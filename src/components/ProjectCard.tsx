@@ -46,8 +46,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           {project.tags.map((tag) => (
             <span
               key={tag.label}
-              className={`px-[0.6rem] py-[0.18rem] rounded-md text-[0.73rem] border ${getTagClasses(tag.color)}`}
+              className={`inline-flex items-center gap-1.5 px-[0.6rem] py-[0.18rem] rounded-md text-[0.73rem] border ${getTagClasses(tag.color)}`}
             >
+              {tag.icon && <tag.icon className="w-3.5 h-3.5" />}
               {tag.label}
             </span>
           ))}

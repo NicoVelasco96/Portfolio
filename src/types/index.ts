@@ -15,6 +15,7 @@ export interface Project {
 export interface Tag {
   label: string;
   color: TagColor;
+  icon?: IconType;
 }
 
 export type TagColor = "blue" | "green" | "teal" | "pink" | "cream" | "default";
