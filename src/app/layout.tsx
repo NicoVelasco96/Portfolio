@@ -4,7 +4,7 @@ import { AppProvider } from "@/context/AppContext";
 
 export const metadata: Metadata = {
   title: "Nico's Portfolio",
-  description: "Desarrollador Backend apasionado por construir productos web modernos, escalables y con buena experiencia de usuario.",
+  description: "Desarrollador Back-End dedicado a la creación de sistemas de alto rendimiento y arquitecturas escalables. Especialista en optimizar la infraestructura para potenciar experiencias de usuario modernas y fluidas.",
   icons: {
     icon: "/favicon.svg",
   },

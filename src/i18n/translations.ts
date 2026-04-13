@@ -10,7 +10,7 @@ export const translations = {
     hero: {
       available: "Disponible para proyectos",
       greeting: "Hola, soy",
-      description: "Desarrollador Back-End apasionado por construir productos web modernos, escalables y con buena experiencia de usuario.",
+      description: "Desarrollador Back-End dedicado a la creación de sistemas de alto rendimiento y arquitecturas escalables. Especialista en optimizar la infraestructura para potenciar experiencias de usuario modernas y fluidas.",
       cta_projects: "Ver proyectos",
       cta_contact: "Contactame",
     },
@@ -92,7 +92,7 @@ export const translations = {
     hero: {
       available: "Available for projects",
       greeting: "Hi, I'm",
-      description: "Back-End developer passionate about building modern, scalable web products with great user experience.",
+      description: "Back-end developer focused on building high-performance systems and scalable architectures. Specialist in optimizing infrastructure to deliver modern, seamless user experiences.",
       cta_projects: "View projects",
       cta_contact: "Contact me",
     },
