@@ -36,7 +36,7 @@ export type Education = {
 };
 
 export type StatBase = {
-  bg: string;
+  
 };
 
 export type ContactLink = {

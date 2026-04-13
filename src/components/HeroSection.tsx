@@ -54,7 +54,7 @@ export default function HeroSection() {
             </a>
             <a
               href="#contacto"
-              className="border border-[rgba(0,0,0,0.08)] text-text bg-white px-8 py-3 rounded-xl font-medium no-underline hover:bg-bg-3 transition-colors duration-200"
+              className="border border-[rgba(0,0,0,0.15)] dark:border-[rgba(255,255,255,0.4)] text-text dark:text-white bg-white dark:bg-transparent px-8 py-3 rounded-xl font-medium no-underline hover:bg-bg-3 dark:hover:bg-white/10 transition-colors duration-200"
             >
               {t.hero.cta_contact}
             </a>
@@ -81,7 +81,7 @@ export default function HeroSection() {
           return (
             <div
               key={pill.label}
-              className="flex items-center gap-[0.6rem] bg-white border border-[rgba(0,0,0,0.08)] px-4 py-[0.38rem] rounded-lg text-[0.82rem] text-muted hover:shadow-sm transition-all"
+              className="flex items-center gap-[0.6rem] bg-white dark:bg-[#1e2a1e] border border-[rgba(0,0,0,0.08)] px-4 py-[0.38rem] rounded-lg text-[0.82rem] text-muted hover:shadow-sm transition-all"
             >
               <Icon className="w-4 h-4" style={{ color: pill.color }} aria-hidden="true" />
               <span className="font-medium">{pill.label}</span>

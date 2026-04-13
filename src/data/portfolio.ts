@@ -166,9 +166,7 @@ export const education: Education[] = [
 ];
 
 export const statBgs: StatBase[] = [
-  { bg: "bg-accent-cream" },
-  { bg: "bg-accent-aquamarine" },
-  { bg: "bg-accent-pink" },
+  
 ];
 
 export const contactLinks: ContactLink[] = [

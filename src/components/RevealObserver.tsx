@@ -1,10 +1,10 @@
 "use client";
-
-// src/components/RevealObserver.tsx
-// This component runs on the client and activates scroll-reveal animations.
 import { useEffect } from "react";
+import { useApp } from "@/context/AppContext";
 
 export default function RevealObserver() {
+  const { isDark } = useApp();
+
   useEffect(() => {
     const obs = new IntersectionObserver(
       (entries) => {
@@ -18,10 +18,13 @@ export default function RevealObserver() {
       { threshold: 0.12 }
     );
 
-    document.querySelectorAll(".reveal").forEach((el) => obs.observe(el));
+    document.querySelectorAll(".reveal").forEach((el) => {
+      el.classList.remove("visible");
+      obs.observe(el);
+    });
 
     return () => obs.disconnect();
-  }, []);
+  }, [isDark]);
 
   return null;
 }
