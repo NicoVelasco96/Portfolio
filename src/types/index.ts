@@ -52,4 +52,6 @@ export type TagColor =
   | "blue"
   | "green"
   | "cream"
-  | "teal";
+  | "teal"
+  | "default"
+  | "pink";
