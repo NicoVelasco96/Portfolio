@@ -31,7 +31,7 @@ export default function EducationSection() {
                   {item.period}
                 </div>
                 <div className="font-syne font-bold text-[1.15rem] leading-tight mb-1">
-                  {item.title}
+                  {t.education.items[item.id as keyof typeof t.education.items]?.title ?? item.id}
                 </div>
                 <div className="text-muted text-[0.88rem] flex items-center gap-1.5">
                   {item.institutionLogo && (

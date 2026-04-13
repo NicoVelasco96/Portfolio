@@ -15,14 +15,14 @@ import {
   SiGithub,
 } from "react-icons/si";
 import { JavaIcon, EvolutionAPIIcon } from "@/components/Icons";
-import type { Project, Education, Stat, TechPill, NavLink, ContactLink } from "@/types";
+import type { Project, Education, StatBase, TechPill, NavLink, ContactLink } from "@/types";
 import { LiaLinkedin } from "react-icons/lia";
 
 export const navLinks: NavLink[] = [
-  { href: "#proyectos", label: "Proyectos" },
-  { href: "#sobre-mi", label: "Sobre mí" },
-  { href: "#educacion", label: "Educación" },
-  { href: "#contacto", label: "Contacto" },
+  { href: "#proyectos" },
+  { href: "#sobre-mi" },
+  { href: "#educacion" },
+  { href: "#contacto" },
 ];
 
 export const techPills: TechPill[] = [
@@ -37,9 +37,6 @@ export const techPills: TechPill[] = [
 export const projects: Project[] = [
   {
     id: "ecommerce",
-    title: "E-Commerce Platform",
-    description:
-      "Tienda online con catálogo, carrito, checkout y panel de administración. Integración con pasarela de pagos y gestión de inventario en tiempo real.",
     iconBg: "bg-accent-green2/50",
     image: "/full-shop.jpg",
     tags: [
@@ -54,9 +51,6 @@ export const projects: Project[] = [
   },
   {
     id: "turnos",
-    title: "Sistema de Turnos Online",
-    description:
-      "Gestión de turnos con calendario interactivo, reserva en tiempo real y notificaciones automáticas por email/WhatsApp.",
     image: "/turnero.jpg",
     iconBg: "bg-accent-blue/50",
     tags: [
@@ -70,9 +64,6 @@ export const projects: Project[] = [
   },
   {
     id: "juridico",
-    title: "Estudio Jurídico – Asesoramiento Legal",
-    description:
-      "Página para estudio legal con áreas de práctica, blog jurídico, reserva de entrevistas y contratación de servicios online.",
     image: "/legales.jpg",
     iconBg: "bg-accent-cream/50",
     tags: [
@@ -85,9 +76,6 @@ export const projects: Project[] = [
   },
   {
     id: "cobranzas",
-    title: "Mensajes Automáticos a Deudores",
-    description:
-      "Sistema de cobranza automatizada con microservicios Java, orquestación de flujos via N8N y envío masivo de mensajes WhatsApp a través de EvolutionAPI. Dashboard de métricas en tiempo real.",
     image: "/buffet.jpg",
     iconBg: "bg-accent-pink/50",
     tags: [
@@ -102,9 +90,6 @@ export const projects: Project[] = [
   },
   {
     id: "portfolio",
-    title: "Portfolio Personal",
-    description:
-      "Este mismo portfolio, construido con Next.js, TypeScript, Tailwind y Astro. Animaciones CSS, i18n y despliegue en Vercel.",
     image: "/portfolio.jpg",
     iconBg: "bg-accent-green1/50",
     tags: [
@@ -123,122 +108,80 @@ export const education: Education[] = [
     id: "utn",
     period: "2022 – 2024",
     institutionLogo: "/logos/utn.png",
-    title: "Técnico Superior en Programación",
     institution: "Universidad Tecnológica Nacional (UTN)",
-    subjects: [
-      "Diseño de Sistemas",
-      "Estructuras de Datos",
-      "POO",
-      "Bases de Datos",
-      "Metodologías Ágiles",
-      "JAVA",
-    ],
+    subjects: ["Diseño de Sistemas", "Estructuras de Datos", "POO", "Bases de Datos", "Metodologías Ágiles", "JAVA"],
     dotColor: "bg-accent-pink",
     dotShadow: "shadow-[0_0_0_3px_rgba(242,186,201,0.45)]",
   },
   {
     id: "TodoCode",
     period: "27-02-2023",
-    title: "Introducción a Git y GitHub",
     institutionLogo: "/logos/todo-code.png",
     institution: "TodoCode Academy",
     certificateUrl: "https://todocodeacademy.com/certificate/2eb/",
-    subjects: [
-      "Git",
-      "GitHub",
-      "Control de versiones",
-      "Colaboración en equipo",
-    ],
+    subjects: ["Git", "GitHub", "Control de versiones", "Colaboración en equipo"],
     dotColor: "bg-accent-pink",
     dotShadow: "shadow-[0_0_0_3px_rgba(242,186,201,0.45)]",
   },
   {
     id: "TodoCode1",
     period: "27-02-2023",
-    title: "Introducción a las Bases de Datos Relacionales (Con MySQL)",
     institutionLogo: "/logos/todo-code.png",
     institution: "TodoCode Academy",
     certificateUrl: "https://todocodeacademy.com/certificate/rw3/",
-    subjects: [
-      "MySQL",
-      "Base de Datos Relacionales",
-      "SQL",
-      "Diseño de Bases de Datos",
-      "Modelado de Datos",
-    ],
+    subjects: ["MySQL", "Base de Datos Relacionales", "SQL", "Diseño de Bases de Datos", "Modelado de Datos"],
     dotColor: "bg-accent-pink",
     dotShadow: "shadow-[0_0_0_3px_rgba(242,186,201,0.45)]",
   },
   {
     id: "TodoCode2",
     period: "01-07-2024",
-    title: "Introducción a los Algoritmos y la Programación",
     institutionLogo: "/logos/todo-code.png",
     institution: "TodoCode Academy",
     certificateUrl: "https://todocodeacademy.com/certificate/introduccion-a-los-algoritmos-y-la-programacion-398/",
-    subjects: [
-      "Diseño de Algoritmos",
-      "Estructuras de Datos",
-      "Logica de Programación",
-      "Resolución de Problemas",
-      "JAVA",
-    ],
+    subjects: ["Diseño de Algoritmos", "Estructuras de Datos", "Logica de Programación", "Resolución de Problemas", "JAVA"],
     dotColor: "bg-accent-pink",
     dotShadow: "shadow-[0_0_0_3px_rgba(242,186,201,0.45)]",
   },
   {
     id: "TodoCode4",
     period: "06-08-2024",
-    title: "Programación Orientada a Objetos con Java",
     institutionLogo: "/logos/todo-code.png",
     institution: "TodoCode Academy",
     certificateUrl: "https://todocodeacademy.com/certificate/certificado-curso-poo-con-java-7vt/",
-    subjects: [
-      "Diseño de Sistemas",
-      "Estructuras de Datos",
-      "POO",
-      "JAVA",
-    ],
+    subjects: ["Diseño de Sistemas", "Estructuras de Datos", "POO", "JAVA"],
     dotColor: "bg-accent-pink",
     dotShadow: "shadow-[0_0_0_3px_rgba(242,186,201,0.45)]",
   },
   {
     id: "TodoCode3",
     period: "04-11-2023",
-    title: "Desarrollo de APIs en Java con Spring Boot",
     institutionLogo: "/logos/todo-code.png",
     institution: "TodoCode Academy",
     certificateUrl: "https://todocodeacademy.com/certificate/vei/",
-    subjects: [
-      "Diseño de APIs REST",
-      "Arquitectura de Sistemas",
-      "Seguridad en APIs",
-      "Testing de APIs",
-      "Spring Boot",
-      "JAVA",
-    ],
+    subjects: ["Diseño de APIs REST", "Arquitectura de Sistemas", "Seguridad en APIs", "Testing de APIs", "Spring Boot", "JAVA"],
     dotColor: "bg-accent-pink",
     dotShadow: "shadow-[0_0_0_3px_rgba(242,186,201,0.45)]",
   },
 ];
 
-export const stats: Stat[] = [
-  { value: "5+", label: "Proyectos completados", bg: "bg-accent-cream" },
-  { value: "3+", label: "Años de experiencia", bg: "bg-accent-aquamarine" },
-  { value: "10+", label: "Tecnologías", bg: "bg-accent-pink" },
+export const statBgs: StatBase[] = [
+  { bg: "bg-accent-cream" },
+  { bg: "bg-accent-aquamarine" },
+  { bg: "bg-accent-pink" },
 ];
 
 export const contactLinks: ContactLink[] = [
   {
     icon: SiGmail,
-    label: "Enviar email",
+    labelKey: "email",
     href: "mailto:velasconico001@gmail.com",
     color: "#E0234E",
     hoverColor: "#EA4335",
   },
   {
     icon: SiGithub,
-    label: "GitHub",
+    labelKey: "github",
     href: "https://github.com/NicoVelasco96",
     color: "#333",
     hoverColor: "#9E9E9E",
@@ -246,7 +189,7 @@ export const contactLinks: ContactLink[] = [
   },
   {
     icon: LiaLinkedin,
-    label: "LinkedIn",
+    labelKey: "linkedin",
     href: "https://www.linkedin.com/in/nicolasvelasco1996/",
     color: "#0077b5",
     hoverColor: "#42A5F5",

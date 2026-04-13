@@ -6,7 +6,10 @@ import type { ContactLink } from "@/types";
 import { useApp } from "@/context/AppContext";
 
 function ContactButton({ link }: { link: ContactLink }) {
+  const { t } = useApp();
   const [hovered, setHovered] = useState(false);
+  const label = t.contact[link.labelKey as keyof typeof t.contact] as string;
+
   return (
     <a
       href={link.href}
@@ -22,7 +25,7 @@ function ContactButton({ link }: { link: ContactLink }) {
       }}
     >
       <link.icon size={20} style={{ color: hovered ? "white" : link.color }} />
-      {link.label}
+      {label}
     </a>
   );
 }
@@ -43,7 +46,7 @@ export default function ContactSection() {
         </p>
         <div className="flex gap-4 justify-center flex-wrap reveal">
           {contactLinks.map((link: ContactLink) => (
-            <ContactButton key={link.label} link={link} />
+            <ContactButton key={link.labelKey} link={link} />
           ))}
         </div>
       </div>

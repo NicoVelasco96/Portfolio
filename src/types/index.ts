@@ -1,57 +1,49 @@
 import type { IconType } from "react-icons";
 
-export interface Project {
-  id: string;
-  title: string;
-  description: string;
-  iconBg: string;
-  tags: Tag[];
+export type NavLink = {
   href: string;
-  image: string;
-}
+};
 
-export interface Tag {
-  label: string;
-  color: TagColor;
-  icon?: IconType;
-}
-
-export type TagColor = "blue" | "green" | "teal" | "pink" | "cream" | "default";
-
-export interface Education {
-  id: string;
-  period: string;
-  title: string;
-  institutionLogo: string;
-  institution: string;
-  subjects: string[];
-  dotColor: string;
-  dotShadow: string;
-  certificateUrl?: string;
-}
-
-export interface Stat {
-  value: string;
-  label: string;
-  bg: string;
-}
-
-export interface TechPill {
+export type TechPill = {
   icon: IconType;
   label: string;
-  color?: string;
-}
+  color: string;
+};
 
-export interface NavLink {
+export type ProjectTag = {
+  icon?: IconType;
+  label: string;
+  color: string;
+};
+
+export type Project = {
+  id: string;
+  iconBg?: string;
+  image: string;
+  tags: ProjectTag[];
   href: string;
-  label: string;
-}
+};
 
-export interface ContactLink {
-  icon: React.ElementType;
-  label: string;
+export type Education = {
+  id: string;
+  period: string;
+  institutionLogo?: string;
+  institution: string;
+  subjects: string[];
+  certificateUrl?: string;
+  dotColor: string;
+  dotShadow: string;
+};
+
+export type StatBase = {
+  bg: string;
+};
+
+export type ContactLink = {
+  icon: IconType;
+  labelKey: string;
   href: string;
   color: string;
   hoverColor: string;
   isExternal?: boolean;
-}
+};
