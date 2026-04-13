@@ -13,7 +13,7 @@ export type TechPill = {
 export type ProjectTag = {
   icon?: IconType;
   label: string;
-  color: string;
+  color: TagColor;
 };
 
 export type Project = {
@@ -47,3 +47,5 @@ export type ContactLink = {
   hoverColor: string;
   isExternal?: boolean;
 };
+
+export type TagColor = "blue" | "green" | "teal" | "pink" | "cream" | "default";

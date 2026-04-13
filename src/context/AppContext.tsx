@@ -1,12 +1,12 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect } from "react";
-import { translations, type Locale, type Translations } from "@/i18n/translations";
+import { translations, type Locale } from "@/i18n/translations";
 
 interface AppContextType {
   locale: Locale;
   setLocale: (locale: Locale) => void;
-  t: Translations;
+  t: typeof translations[Locale];  // <-- en vez de Translations
   isDark: boolean;
   toggleDark: () => void;
 }
