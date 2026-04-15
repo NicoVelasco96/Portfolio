@@ -74,7 +74,7 @@ export const translations = {
     },
     stats: [
       { value: "5+", label: "Proyectos completados" },
-      { value: "3+", label: "Años de experiencia" },
+      { value: "2+", label: "Años de experiencia" },
       { value: "10+", label: "Tecnologías" },
     ],
     footer: {
@@ -156,7 +156,7 @@ export const translations = {
     },
     stats: [
       { value: "5+", label: "Completed projects" },
-      { value: "3+", label: "Years of experience" },
+      { value: "2+", label: "Years of experience" },
       { value: "10+", label: "Technologies" },
     ],
     footer: {
