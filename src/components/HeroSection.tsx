@@ -13,13 +13,6 @@ export default function HeroSection() {
       id="hero"
       className="min-h-screen flex flex-col justify-center px-16 pt-32 pb-16 relative overflow-hidden"
     >
-      <div
-        className="absolute top-[-18%] right-[-8%] w-[62vw] h-[62vw] rounded-full pointer-events-none"
-        style={{
-          background: "radial-gradient(circle, #bad7f2 0%, transparent 65%)",
-          opacity: 0.5,
-        }}
-      />
 
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
 
@@ -67,7 +60,7 @@ export default function HeroSection() {
             <img
               src="/foto_perfil.jpg"
               alt="Nicolas Velasco"
-              className="w-[340px] h-[340px] object-cover object-top rounded-2xl shadow-lg"
+              className="w-[340px] h-[340px] object-cover object-top rounded-2xl shadow-lg ring-2 ring-[#c084bb]/40"
             />
           </div>
         </div>
