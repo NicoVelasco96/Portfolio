@@ -7,7 +7,7 @@ import { useApp } from "@/context/AppContext";
 export default function ProjectsSection() {
   const { t } = useApp();
   return (
-    <section id="proyectos" className="py-24 px-16 bg-bg-2 relative">
+    <section id="proyectos" className="py-24 px-4 sm:px-8 md:px-16 bg-bg-2 relative">
       <p className="text-[0.74rem] uppercase tracking-[0.15em] text-brand-pink mb-2 font-semibold reveal">
         {t.projects.label}
       </p>
