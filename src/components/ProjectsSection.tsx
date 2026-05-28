@@ -17,7 +17,7 @@ export default function ProjectsSection() {
       <p className="text-muted max-w-[560px] mb-12 reveal">
         {t.projects.description}
       </p>
-      <div className="grid grid-cols-[repeat(auto-fill,minmax(310px,1fr))] gap-8 items-stretch">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 items-stretch">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}

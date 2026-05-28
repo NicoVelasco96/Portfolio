@@ -78,7 +78,8 @@ export const translations = {
       { value: "10+", label: "Tecnologías" },
     ],
     footer: {
-      made_with: "Hecho con ☕ y mucho código",
+      made_with_prefix: "Hecho con",
+      made_with_suffix: "y mucho código",
     },
   },
   en: {
@@ -160,7 +161,8 @@ export const translations = {
       { value: "10+", label: "Technologies" },
     ],
     footer: {
-      made_with: "Made with ☕ and lots of code",
+      made_with_prefix: "Made with",
+      made_with_suffix: "and lots of code",
     },
   },
 } as const;
