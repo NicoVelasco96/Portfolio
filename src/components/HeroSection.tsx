@@ -1,9 +1,35 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { techPills } from "@/data/portfolio";
 import type { TechPill } from "@/types";
 import { useApp } from "@/context/AppContext";
+
+function TypewriterText({ text }: { text: string }) {
+  const [displayed, setDisplayed] = useState("");
+
+  useEffect(() => {
+    setDisplayed("");
+    let i = 0;
+    const timer = setInterval(() => {
+      if (i < text.length) {
+        setDisplayed(text.slice(0, i + 1));
+        i++;
+      } else {
+        clearInterval(timer);
+      }
+    }, 70);
+    return () => clearInterval(timer);
+  }, [text]);
+
+  return (
+    <span className="bg-gradient-to-br from-brand-pink to-[#5a88b8] bg-clip-text text-transparent">
+      {displayed}
+      <span className="animate-pulse">|</span>
+    </span>
+  );
+}
+
 
 export default function HeroSection() {
   const { t } = useApp();
@@ -14,28 +40,25 @@ export default function HeroSection() {
       className="min-h-screen flex flex-col justify-center px-4 sm:px-8 md:px-16 pt-32 pb-16 relative overflow-hidden"
     >
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-12">
-
-        {/* Columna izquierda — texto */}
         <div className="flex flex-col flex-1">
-          <div className="inline-flex items-center gap-2 bg-accent-green2 border border-[rgba(100,180,130,0.3)] px-4 py-[0.35rem] rounded-full text-[0.82rem] text-[#1a5a30] mb-6 w-fit relative reveal">
+
+          {/* Badge con glow pulse */}
+          <div className="badge-glow inline-flex items-center gap-2 bg-accent-green2 border border-[rgba(100,180,130,0.3)] px-4 py-[0.35rem] rounded-full text-[0.82rem] text-[#1a5a30] mb-6 w-fit relative reveal">
             <span className="w-[7px] h-[7px] rounded-full bg-[#38a860] dot-pulse block" />
             {t.hero.available}
           </div>
 
-          <h1
-            className="font-syne font-extrabold leading-[1.05] tracking-[-0.04em] mb-5 relative reveal"
-            style={{ fontSize: "clamp(2.4rem, 6.5vw, 5.4rem)" }}
-          >
+          {/* Título con typewriter */}
+          <h1 className="font-syne font-extrabold leading-[1.05] tracking-[-0.04em] mb-5 relative reveal" style={{ fontSize: "clamp(2.4rem, 6.5vw, 5.4rem)" }}>
             {t.hero.greeting}
             <br />
-            <span className="bg-gradient-to-br from-brand-pink to-[#5a88b8] bg-clip-text text-transparent">
-              Nicolas Velasco
-            </span>
+            <TypewriterText text="Nicolas Velasco" />
           </h1>
 
-          <p className="text-muted max-w-[520px] mb-10 font-light text-[1.05rem] relative reveal">
+          <p className="text-muted max-w-[520px] mb-10 font-light text-[1.1rem] relative reveal">
             {t.hero.description}
           </p>
+
 
           <div className="flex gap-3 flex-wrap relative reveal">
             <a

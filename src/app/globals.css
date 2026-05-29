@@ -8,7 +8,7 @@
   --bg:     #f8fbf6;
   --bg2:    #eef8ea;
   --bg3:    #e4f2e0;
-  --card:   #ffffff; /* Este es el color para modo claro */
+  --card:   #ffffff;
   --border: rgba(0,0,0,0.08);
   --text:   #253225;
   --muted:  #5e7560;
@@ -18,8 +18,8 @@
   --bg:     #111a11;
   --bg2:    #162016;
   --bg3:    #1c2a1c;
-  --card:   #000000; /* ESTA ES LA LÍNEA QUE FALTABA: Fondo negro para los cuadrados */
-  --border: rgba(255,255,255,0.12);
+  --card:   #1e2a1e;
+  --border: rgba(255,255,255,0.08);
   --text:   #e8f0e8;
   --muted:  #8aaa8a;
 }
@@ -70,6 +70,16 @@ body {
   animation: dotPulse 2s infinite;
 }
 
+/* Glow pulse for available badge */
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(100, 180, 130, 0.5); }
+  50%       { box-shadow: 0 0 0 8px rgba(100, 180, 130, 0); }
+}
+
+.badge-glow {
+  animation: glowPulse 2.5s ease-in-out infinite;
+}
+
 /* Timeline line gradient */
 .timeline-line {
   background: linear-gradient(to bottom, #baf2bb, #bad7f2, #f2bac9);
@@ -80,3 +90,8 @@ body {
   height: 5px;
   background: linear-gradient(90deg, #baf2bb, #baf2d8, #bad7f2, #f2bac9, #f2e2ba);
 }
+
+/* Dark mode overrides for hardcoded Tailwind classes */
+.dark .text-gray-900 { color: #e8e8e8; }
+.dark .text-gray-600 { color: #9ca3af; }
+.dark .text-gray-800 { color: #d1d5db; }
