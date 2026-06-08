@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import type { Project } from "@/types";
+import type { Project, TagColor } from "@/types";
 import { getTagClasses } from "@/lib/utils";
 import { useApp } from "@/context/AppContext";
 
@@ -41,7 +41,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </p>
         <div className="flex gap-2 flex-wrap mt-auto pt-2">
           {project.tags.map((tag) => (
-            <span key={tag.label} className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[0.72rem] border font-medium ${getTagClasses(tag.color)}`}>
+            <span key={tag.label} className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[0.72rem] border font-medium ${getTagClasses(tag.color as TagColor)}`}>
               {tag.icon && <tag.icon className="w-3.5 h-3.5" />}
               {tag.label}
             </span>
