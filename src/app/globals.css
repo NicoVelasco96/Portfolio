@@ -54,13 +54,13 @@ body {
   transform: none;
 }
 
-/* Blob pulse animation */
+/* Blob pulse */
 @keyframes blobPulse {
   0%, 100% { opacity: 0.5; }
   50% { opacity: 0.35; }
 }
 
-/* Availability dot pulse */
+/* Dot pulse */
 @keyframes dotPulse {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.3; }
@@ -80,18 +80,69 @@ body {
   animation: glowPulse 2.5s ease-in-out infinite;
 }
 
+/* Floating photo */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+
+.photo-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Stagger in for tech pills */
+@keyframes staggerIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.pill-stagger {
+  opacity: 0;
+  animation: staggerIn 0.4s ease forwards;
+}
+
+/* Animated gradient color-band */
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 /* Timeline line gradient */
 .timeline-line {
   background: linear-gradient(to bottom, #baf2bb, #bad7f2, #f2bac9);
 }
 
-/* Color band */
+/* Color band with animation */
 .color-band {
   height: 5px;
-  background: linear-gradient(90deg, #baf2bb, #baf2d8, #bad7f2, #f2bac9, #f2e2ba);
+  background: linear-gradient(90deg, #baf2bb, #baf2d8, #bad7f2, #f2bac9, #f2e2ba, #baf2bb);
+  background-size: 300% 300%;
+  animation: gradientShift 4s ease infinite;
 }
 
-/* Dark mode overrides for hardcoded Tailwind classes */
+@keyframes shimmerMove {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(300%); }
+}
+
+.shimmer-line {
+  position: absolute;
+  inset: 0;
+  top: 0;
+  bottom: 0;
+  width: 40%;
+  background: linear-gradient(105deg, transparent, rgba(255,255,255,0.25), transparent);
+  transform: translateX(-100%);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.group:hover .shimmer-line {
+  animation: shimmerMove 0.7s ease forwards;
+}
+
+/* Dark mode overrides */
 .dark .text-gray-900 { color: #e8e8e8; }
 .dark .text-gray-600 { color: #9ca3af; }
 .dark .text-gray-800 { color: #d1d5db; }

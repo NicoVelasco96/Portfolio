@@ -104,9 +104,10 @@ export default function AboutSection() {
         </div>
         <div className="flex flex-col items-center justify-center gap-6 relative">
           <LinkedInBadge />
-          <div className="bg-card border border-[rgba(0,0,0,0.08)] px-5 py-4 rounded-2xl text-[0.84rem] flex items-center gap-2 shadow-[0_8px_24px_rgba(0,0,0,0.08)] w-full max-w-[420px]">
-            <span className="w-2 h-2 rounded-full bg-[#38a860] block flex-shrink-0" />
-            {t.about.available}
+          {/* Badge con glow pulse */}
+          <div className="badge-glow inline-flex items-center gap-2 bg-accent-green2 border border-[rgba(100,180,130,0.3)] px-4 py-[0.35rem] rounded-full text-[0.82rem] text-[#1a5a30] mb-6 w-fit relative reveal">
+            <span className="w-[7px] h-[7px] rounded-full bg-[#38a860] dot-pulse block" />
+            {t.hero.available}
           </div>
         </div>
       </div>

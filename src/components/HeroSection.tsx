@@ -59,7 +59,6 @@ export default function HeroSection() {
             {t.hero.description}
           </p>
 
-
           <div className="flex gap-3 flex-wrap relative reveal">
             <a
               href="#proyectos"
@@ -76,27 +75,28 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Columna derecha — foto */}
+        {/* Columna derecha — foto con float */}
         <div className="flex items-center justify-center lg:justify-end flex-shrink-0 reveal">
           <div className="relative">
             <img
               src="/foto_perfil.jpg"
               alt="Nicolas Velasco"
-              className="w-[240px] h-[240px] sm:w-[300px] sm:h-[300px] lg:w-[340px] lg:h-[340px] object-cover object-top rounded-2xl shadow-lg ring-2 ring-[#c084bb]/40"
+              className="photo-float w-[240px] h-[240px] sm:w-[300px] sm:h-[300px] lg:w-[340px] lg:h-[340px] object-cover object-top rounded-2xl shadow-lg ring-2 ring-[#c084bb]/40"
             />
           </div>
         </div>
 
       </div>
 
-      {/* Tech strip */}
+      {/* Tech strip con stagger */}
       <div className="flex gap-3 flex-wrap mt-12 pt-8 border-t border-[rgba(0,0,0,0.08)] relative reveal">
-        {techPills.map((pill: TechPill) => {
+        {techPills.map((pill: TechPill, i: number) => {
           const Icon = pill.icon;
           return (
             <div
               key={pill.label}
-              className="flex items-center gap-[0.6rem] bg-white dark:bg-[#1e2a1e] border border-[rgba(0,0,0,0.08)] px-3 sm:px-4 py-[0.38rem] rounded-lg text-[0.78rem] sm:text-[0.82rem] text-muted hover:shadow-sm transition-all"
+              className="pill-stagger flex items-center gap-[0.6rem] bg-white dark:bg-[#1e2a1e] border border-[rgba(0,0,0,0.08)] px-3 sm:px-4 py-[0.38rem] rounded-lg text-[0.78rem] sm:text-[0.82rem] text-muted hover:shadow-sm transition-all"
+              style={{ animationDelay: `${i * 100}ms` }}
             >
               <Icon className="w-4 h-4 flex-shrink-0" style={{ color: pill.color }} aria-hidden="true" />
               <span className="font-medium">{pill.label}</span>
